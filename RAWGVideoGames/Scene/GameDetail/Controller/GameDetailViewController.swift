@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameDetailViewController: UIViewController {
+final class GameDetailViewController: UIViewController {
     
     @IBOutlet weak var gameImage: UIImageView!
     @IBOutlet weak var gameNameLabel: UILabel!
@@ -20,8 +20,8 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var screenShotsCount: UILabel!
     @IBOutlet weak var moviesCount: UILabel!
     var gameId: Int?
-    var selectedGame: String = ""
-    var isFavorite: String = ""
+    private var selectedGame: String = ""
+    private var isFavorite: String = ""
     private var viewModel: GameDetailViewModelProtocol = GameDetailViewModel()
 
     override func viewDidLoad() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoriteListViewController: UIViewController {
+final class FavoriteListViewController: UIViewController {
 
     @IBOutlet weak var favoriteListTableView: UITableView! {
         didSet {

@@ -12,7 +12,7 @@ protocol NoteDetailViewControllerDelegate: AnyObject {
     func didUpdateNote(previousText: String, currentText: String, noteDate: String)
 }
 
-class NoteDetailViewController: BaseViewController {
+final class NoteDetailViewController: BaseViewController {
 
     @IBOutlet weak var addGameNameLabel: UITextField!
     @IBOutlet weak var noteTextView: UITextView!
@@ -22,8 +22,7 @@ class NoteDetailViewController: BaseViewController {
     private var addNoteViewModel: NoteDetailViewModelProtocol = NoteDetailViewModel()
     weak var delegate: NoteDetailViewControllerDelegate?
     var selectedNote: Notes?
-    var selectedNoteTrueOrFalse = false
-    //weak var delegate: NewNoteDelegate?
+    private var selectedNoteTrueOrFalse = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

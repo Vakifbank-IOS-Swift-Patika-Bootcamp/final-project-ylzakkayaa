@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NoteListViewController: UIViewController {
+final class NoteListViewController: UIViewController {
 
     @IBOutlet weak var addNoteButtonOutlet: UIButton!
     @IBOutlet weak var noteListTableView: UITableView! {
@@ -19,7 +19,7 @@ class NoteListViewController: UIViewController {
     }
     
     private var noteViewModel: NoteListViewModelProtocol = NoteListViewModel()
-    var selectedNote: Notes?
+    private var selectedNote: Notes?
     
     override func viewDidLoad() {
         super.viewDidLoad()

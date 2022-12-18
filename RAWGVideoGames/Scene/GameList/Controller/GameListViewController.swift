@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GamesListViewController: BaseViewController {
+final class GamesListViewController: BaseViewController {
     
     @IBOutlet weak var trailing: NSLayoutConstraint!
     @IBOutlet weak var leading: NSLayoutConstraint!

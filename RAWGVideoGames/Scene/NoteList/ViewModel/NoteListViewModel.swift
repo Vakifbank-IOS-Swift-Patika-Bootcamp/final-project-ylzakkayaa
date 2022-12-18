@@ -27,7 +27,7 @@ protocol NoteListViewModelDelegate: AnyObject {
 final class NoteListViewModel: NoteListViewModelProtocol {
     
     var delegate: NoteListViewModelDelegate?
-    var notes: [Notes]?
+    private var notes: [Notes]?
     
     func fetchNotes() {
         notes = CoreDataManager.shared.getNotes()
@@ -68,12 +68,4 @@ final class NoteListViewModel: NoteListViewModelProtocol {
         return formatteddate
     }
 }
-
-
-
-
-
-
-
-
 

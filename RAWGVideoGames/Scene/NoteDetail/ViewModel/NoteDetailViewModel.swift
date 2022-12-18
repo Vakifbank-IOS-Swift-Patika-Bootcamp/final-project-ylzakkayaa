@@ -24,7 +24,7 @@ protocol NoteDetailViewModelDelegate: AnyObject {
 final class NoteDetailViewModel: NoteDetailViewModelProtocol {
     
     var delegate: NoteDetailViewModelDelegate?
-    var notes: [Notes]?
+    private var notes: [Notes]?
     
     func noteTextControl(noteText: String, selectedNoteTrueOrFalse: Bool, button: UIButton, gameLabelHidden: UITextField, dateText: UILabel, selectedNote: Notes?)  -> Bool {
         if noteText != "" {
