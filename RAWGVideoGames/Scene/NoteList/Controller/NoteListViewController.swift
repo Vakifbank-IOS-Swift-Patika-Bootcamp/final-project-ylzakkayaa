@@ -37,6 +37,9 @@ class NoteListViewController: UIViewController {
         noteListTableView.reloadData()
     }
     @IBAction func addNoteButton(_ sender: Any) {
+        guard let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoteDetailViewController") as? NoteDetailViewController else { return }
+        detailVC.delegate = self
+        present(detailVC, animated: true)
     }
 }
 
@@ -62,11 +65,29 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedNote = noteViewModel.getNotes(at: indexPath.row)
+        guard let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoteDetailViewController") as? NoteDetailViewController else { return }
+        detailVC.selectedNote = selectedNote
+        detailVC.delegate = self
+        self.present(detailVC, animated: true)
+        selectedNote = nil
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         noteViewModel.deleteNote(indexPath: indexPath, editingStyle: .delete)
         tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+}
+
+
+extension NoteListViewController: NoteDetailViewControllerDelegate {
+    func didAddNote(gameNote: Notes) {
+        noteViewModel.addNotes(note: gameNote)
+        noteListTableView.reloadData()
+    }
+    
+    func didUpdateNote(previousText: String, currentText: String, noteDate: String) {
+        noteListTableView.reloadData()
     }
 }
 
