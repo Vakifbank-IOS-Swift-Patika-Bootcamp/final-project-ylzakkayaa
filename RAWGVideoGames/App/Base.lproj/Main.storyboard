@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tF4-aZ-5WI">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dXY-dK-41y">
+            <objects>
+                <tabBarController id="tF4-aZ-5WI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SPR-eD-CNR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e3x-dJ-FOh" kind="relationship" relationship="viewControllers" id="QCY-Y8-e86"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOR-Nv-EHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="-9"/>
+        </scene>
+        <!--GAMES-->
+        <scene sceneID="KNm-U8-9eM">
+            <objects>
+                <viewController title="GAMES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zEI-es-WVB" customClass="GamesListViewController" customModule="RAWGVideoGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qpL-je-pPV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="DLe-MU-TEE">
+                                <rect key="frame" x="5" y="123" width="93.666666666666671" height="147"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLn-5S-bZN">
+                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Name"/>
+                                        <connections>
+                                            <action selector="orderingName:" destination="zEI-es-WVB" eventType="touchUpInside" id="ZmF-yn-qJb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhL-Gh-z8j">
+                                        <rect key="frame" x="0.0" y="56.333333333333343" width="93.666666666666671" height="34.333333333333343"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Released"/>
+                                        <connections>
+                                            <action selector="orderingReleased:" destination="zEI-es-WVB" eventType="touchUpInside" id="3JX-nZ-Q29"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjT-Rg-KXX">
+                                        <rect key="frame" x="0.0" y="112.66666666666664" width="93.666666666666671" height="34.333333333333329"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Rating"/>
+                                        <connections>
+                                            <action selector="orderingRating:" destination="zEI-es-WVB" eventType="touchUpInside" id="PNw-7v-nBN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWH-zF-2Ah">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ujw-MQ-g47">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Game Name at Search" id="7pj-Jb-xr1">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ujw-MQ-g47" secondAttribute="bottom" id="Mx7-QL-ftj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ujw-MQ-g47" secondAttribute="trailing" id="TdV-FD-Kdw"/>
+                                    <constraint firstItem="Ujw-MQ-g47" firstAttribute="top" secondItem="rWH-zF-2Ah" secondAttribute="top" id="ZWo-Lw-m0d"/>
+                                    <constraint firstItem="Ujw-MQ-g47" firstAttribute="leading" secondItem="rWH-zF-2Ah" secondAttribute="leading" id="jKc-ST-bEZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZQJ-5c-6SN"/>
+                        <color key="backgroundColor" red="0.98237901930000004" green="0.93685631849999995" blue="0.9560474551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="DLe-MU-TEE" firstAttribute="top" secondItem="ZQJ-5c-6SN" secondAttribute="top" constant="20" id="0fa-JK-GNN"/>
+                            <constraint firstAttribute="trailing" secondItem="rWH-zF-2Ah" secondAttribute="trailing" id="HVh-5o-Nv5"/>
+                            <constraint firstItem="rWH-zF-2Ah" firstAttribute="top" secondItem="ZQJ-5c-6SN" secondAttribute="top" id="Hob-Z5-Iz2"/>
+                            <constraint firstItem="DLe-MU-TEE" firstAttribute="leading" secondItem="ZQJ-5c-6SN" secondAttribute="leading" constant="5" id="WUW-Wt-b63"/>
+                            <constraint firstItem="ZQJ-5c-6SN" firstAttribute="bottom" secondItem="rWH-zF-2Ah" secondAttribute="bottom" id="guP-F1-yBk"/>
+                            <constraint firstItem="rWH-zF-2Ah" firstAttribute="leading" secondItem="ZQJ-5c-6SN" secondAttribute="leading" id="iIj-z4-zEh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GAME LIST" id="y67-jP-x6w">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.up.arrow.down" catalog="system" id="vFI-xj-Sfc">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="orderingMenu:" destination="zEI-es-WVB" id="5Qa-bs-Kff"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gameListTableView" destination="Ujw-MQ-g47" id="We3-0p-a8R"/>
+                        <outlet property="leading" destination="iIj-z4-zEh" id="SqK-yC-hMo"/>
+                        <outlet property="searchBar" destination="7pj-Jb-xr1" id="bJf-3w-had"/>
+                        <outlet property="trailing" destination="HVh-5o-Nv5" id="wcA-2v-RET"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AwW-Nx-bBU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1514" y="-294"/>
+        </scene>
+        <!--GAMES-->
+        <scene sceneID="Sek-hk-2a5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e3x-dJ-FOh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="GAMES" image="gamecontroller" catalog="system" id="NCW-U4-5X3"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xh2-VW-07M">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zEI-es-WVB" kind="relationship" relationship="rootViewController" id="bfs-HF-zXz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9O-kA-XJd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-294"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
+        <image name="gamecontroller" catalog="system" width="128" height="79"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
