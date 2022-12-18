@@ -26,6 +26,7 @@ final class GamesListViewModel: BaseViewController, GamesListViewModelProtocol {
     weak var delegate: GamesListViewModelDelegate?
     private var games: [GameModel]?
     private var filteredGames: [GameModel]?
+
     func fetchGames() {
         Client.getGames { [weak self] games, error in
         guard let self = self else { return }
