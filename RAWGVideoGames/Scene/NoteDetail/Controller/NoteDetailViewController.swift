@@ -56,7 +56,6 @@ extension NoteDetailViewController: NoteDetailViewModelDelegate {
     }
     
     func updatePressed(previousText: String, currentText: String) {
-        print("updatePressed içine girdiii")
         CoreDataManager.shared.updateNote(previousText: previousText, currentText: currentText, noteDate: addNoteViewModel.currentTime())
         self.delegate?.didUpdateNote(previousText: previousText, currentText: currentText, noteDate: addNoteViewModel.currentTime())
     }

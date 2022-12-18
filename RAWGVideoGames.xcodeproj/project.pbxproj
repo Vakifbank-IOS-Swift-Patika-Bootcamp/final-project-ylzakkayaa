@@ -35,6 +35,7 @@
 		F0A64119294F74E10046D2D4 /* NoteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A64118294F74E10046D2D4 /* NoteDetailViewModel.swift */; };
 		F0A6411B294F77C70046D2D4 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6411A294F77C70046D2D4 /* Localization.swift */; };
 		F0A64120294F79910046D2D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0A64122294F79910046D2D4 /* Localizable.strings */; };
+		F0A64125294F8EC90046D2D4 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A64124294F8EC90046D2D4 /* LocalNotificationManager.swift */; };
 		F0D4A182294F2534006C528B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D4A181294F2534006C528B /* AppDelegate.swift */; };
 		F0D4A184294F2534006C528B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D4A183294F2534006C528B /* SceneDelegate.swift */; };
 		F0D4A186294F2534006C528B /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D4A185294F2534006C528B /* GameListViewController.swift */; };
@@ -93,6 +94,7 @@
 		F0A6411F294F795F0046D2D4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F0A64121294F79910046D2D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0A64123294F79960046D2D4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0A64124294F8EC90046D2D4 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		F0D4A17E294F2534006C528B /* RAWGVideoGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAWGVideoGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D4A181294F2534006C528B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0D4A183294F2534006C528B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				F0A640E4294F51150046D2D4 /* BaseResponse.swift */,
 				F0A6411A294F77C70046D2D4 /* Localization.swift */,
 				F0A64122294F79910046D2D4 /* Localizable.strings */,
+				F0A64124294F8EC90046D2D4 /* LocalNotificationManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				F0A640D6294F4FDA0046D2D4 /* GamesListViewModel.swift in Sources */,
 				F0A64119294F74E10046D2D4 /* NoteDetailViewModel.swift in Sources */,
 				F0A640E1294F50D80046D2D4 /* Client.swift in Sources */,
+				F0A64125294F8EC90046D2D4 /* LocalNotificationManager.swift in Sources */,
 				F0A64111294F6D0A0046D2D4 /* NoteListTableViewCell.swift in Sources */,
 				F0D4A182294F2534006C528B /* AppDelegate.swift in Sources */,
 				F0A640DF294F50BC0046D2D4 /* CoreDataManager.swift in Sources */,

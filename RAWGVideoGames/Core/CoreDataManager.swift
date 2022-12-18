@@ -72,7 +72,6 @@ final class CoreDataManager {
     //Yazılan notları kaydetmek için kullanacağız.
     func saveNote(text: String, gameName: String, noteDate: String) -> Notes? {
         //CoreDatadaki note'a erişiyorum.
-        print("save note'a girdi")
         let entity = NSEntityDescription.entity(forEntityName: "Notes", in: managedContext)!
         let note = NSManagedObject(entity: entity, insertInto: managedContext)
         //Entityden olan bir obje oluşturuyorum ve buna text'i setliyorum.
@@ -81,7 +80,6 @@ final class CoreDataManager {
         note.setValue(gameName, forKey: "gameName")
         note.setValue(noteDate, forKey: "NoteDate")
         do {
-            print("kaydetti")
             try managedContext.save()
             return note as? Notes
         } catch let error as NSError {
@@ -104,9 +102,6 @@ final class CoreDataManager {
     
     //İçerideki notlardan update etmek için.
     func updateNote(previousText: String, currentText: String, noteDate: String) -> Bool {
-        print("coredata update note")
-        print(previousText)
-        print(currentText)
         var success = true
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Notes")
         fetchRequest.predicate = NSPredicate(format: "noteText = %@", previousText) //Requestte gelen önceki text'e göre cora datada arama yapıyorum.
@@ -114,7 +109,6 @@ final class CoreDataManager {
             let test = try managedContext.fetch(fetchRequest)
             if test.count >= 1 {
                 let objectUpdate = test[0] as! NSManagedObject
-                print(currentText)
                 objectUpdate.setValue(currentText, forKey: "noteText") //Yeni gelen texte göre update işlemini yapıyorum.
                 objectUpdate.setValue(noteDate, forKey: "noteDate")
                 try managedContext.save() // look in AppDelegate.swift for this function
