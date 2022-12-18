@@ -53,5 +53,22 @@ final class CoreDataManager {
         let results = try? managedContext.fetch(fetchRequest)
         return results?.count != 0
     }
+    
+    //İçerideki notlardan silmek için.
+    func deleteFavorite(gameId: Int) {
+        let fetchRequest: NSFetchRequest<Games> = Games.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "gameId = %@ ", String(gameId))
+        if let favorite = try? managedContext.fetch(fetchRequest).first {
+            managedContext.delete(favorite)
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
+    }
+    
 }
+
+
 

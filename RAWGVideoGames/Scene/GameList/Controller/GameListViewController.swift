@@ -85,6 +85,11 @@ extension GamesListViewController: UITableViewDelegate, UITableViewDataSource, U
         return 300 //Cell height
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameDetailViewController") as? GameDetailViewController else { return }
+        detailVC.gameId = GameViewModel.getGamesId(at: indexPath.row)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard let text = searchBar.text else { return }
