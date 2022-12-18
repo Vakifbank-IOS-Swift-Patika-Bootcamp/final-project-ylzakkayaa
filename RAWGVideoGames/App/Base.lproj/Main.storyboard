@@ -20,6 +20,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="e3x-dJ-FOh" kind="relationship" relationship="viewControllers" id="QCY-Y8-e86"/>
+                        <segue destination="CDK-LI-Vro" kind="relationship" relationship="viewControllers" id="XSa-CC-QyV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOR-Nv-EHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,7 +142,7 @@
         <!--Game Detail View Controller-->
         <scene sceneID="GlM-xa-jKS">
             <objects>
-                <viewController storyboardIdentifier="GameDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efk-8O-6uo" customClass="GameDetailViewController" customModule="VideoGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efk-8O-6uo" customClass="GameDetailViewController" customModule="RAWGVideoGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KoU-6r-ASt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,12 +382,63 @@
             </objects>
             <point key="canvasLocation" x="2179" y="-294"/>
         </scene>
+        <!--FAVORITE GAMES-->
+        <scene sceneID="rWB-QH-ReK">
+            <objects>
+                <viewController id="KHi-lZ-Byr" customClass="FavoriteListViewController" customModule="VideoGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghO-nm-i7v">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eHx-iA-ffX">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="he0-4E-NFq"/>
+                        <color key="backgroundColor" red="0.98237901930000004" green="0.93685631849999995" blue="0.9560474551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eHx-iA-ffX" firstAttribute="bottom" secondItem="he0-4E-NFq" secondAttribute="bottom" id="JgD-lp-XTJ"/>
+                            <constraint firstItem="eHx-iA-ffX" firstAttribute="trailing" secondItem="he0-4E-NFq" secondAttribute="trailing" id="QFa-tw-dvj"/>
+                            <constraint firstItem="eHx-iA-ffX" firstAttribute="top" secondItem="he0-4E-NFq" secondAttribute="top" id="QKW-qi-7Th"/>
+                            <constraint firstItem="eHx-iA-ffX" firstAttribute="leading" secondItem="he0-4E-NFq" secondAttribute="leading" id="TKJ-3n-ieE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FAVORITE GAMES" id="JfM-tB-8hg"/>
+                    <connections>
+                        <outlet property="favoriteListTableView" destination="eHx-iA-ffX" id="3Zx-qt-ceD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPe-oi-mLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="461"/>
+        </scene>
+        <!--FAVORITE-->
+        <scene sceneID="icj-Qh-Cgy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CDK-LI-Vro" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="FAVORITE" image="heart.fill" catalog="system" id="yej-yt-oDZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2da-cW-MEK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KHi-lZ-Byr" kind="relationship" relationship="rootViewController" id="n1D-hr-rrQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ap6-gM-xwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="461"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
         <image name="camera.metering.matrix" catalog="system" width="128" height="93"/>
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="tv.fill" catalog="system" width="128" height="95"/>
         <systemColor name="labelColor">
