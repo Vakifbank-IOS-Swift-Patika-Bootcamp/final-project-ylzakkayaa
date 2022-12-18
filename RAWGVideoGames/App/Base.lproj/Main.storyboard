@@ -21,6 +21,7 @@
                     <connections>
                         <segue destination="e3x-dJ-FOh" kind="relationship" relationship="viewControllers" id="QCY-Y8-e86"/>
                         <segue destination="CDK-LI-Vro" kind="relationship" relationship="viewControllers" id="XSa-CC-QyV"/>
+                        <segue destination="rXF-hY-Q09" kind="relationship" relationship="viewControllers" id="k31-Km-7rB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOR-Nv-EHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -385,7 +386,7 @@
         <!--FAVORITE GAMES-->
         <scene sceneID="rWB-QH-ReK">
             <objects>
-                <viewController id="KHi-lZ-Byr" customClass="FavoriteListViewController" customModule="VideoGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KHi-lZ-Byr" customClass="FavoriteListViewController" customModule="RAWGVideoGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ghO-nm-i7v">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,6 +433,68 @@
             </objects>
             <point key="canvasLocation" x="1060" y="461"/>
         </scene>
+        <!--NOTES-->
+        <scene sceneID="myk-gZ-YsF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rXF-hY-Q09" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="NOTES" image="note.text" catalog="system" id="wAi-HD-lsR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DBU-nL-ZuP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8iI-9v-aDn" kind="relationship" relationship="rootViewController" id="ydR-QT-CUh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4YZ-c3-PO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1050" y="728"/>
+        </scene>
+        <!--NOTES-->
+        <scene sceneID="QUA-QT-rRw">
+            <objects>
+                <viewController id="8iI-9v-aDn" customClass="NoteListViewController" customModule="VideoGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rbm-2t-Yip">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D9s-of-ZiJ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-UC-aRS">
+                                <rect key="frame" x="327" y="832" width="67" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98237901930000004" green="0.93685631849999995" blue="0.9560474551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="add"/>
+                                <connections>
+                                    <action selector="addNoteButton:" destination="8iI-9v-aDn" eventType="touchUpInside" id="NVE-FU-2SH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rAU-SA-yOw"/>
+                        <color key="backgroundColor" red="0.98237901930000004" green="0.93685631849999995" blue="0.9560474551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="D9s-of-ZiJ" firstAttribute="top" secondItem="rAU-SA-yOw" secondAttribute="top" id="Tf3-bf-K4k"/>
+                            <constraint firstItem="rAU-SA-yOw" firstAttribute="bottom" secondItem="D9s-of-ZiJ" secondAttribute="bottom" id="fsc-BI-mKL"/>
+                            <constraint firstItem="D9s-of-ZiJ" firstAttribute="leading" secondItem="rAU-SA-yOw" secondAttribute="leading" id="ipa-kw-pF6"/>
+                            <constraint firstItem="rAU-SA-yOw" firstAttribute="trailing" secondItem="D9s-of-ZiJ" secondAttribute="trailing" id="oWY-vB-2e3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NOTES" id="701-0Y-McS"/>
+                    <connections>
+                        <outlet property="addNoteButtonOutlet" destination="sLF-UC-aRS" id="aLT-g5-R7r"/>
+                        <outlet property="noteListTableView" destination="D9s-of-ZiJ" id="JGS-BE-ydm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wR2-Lz-gfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-227" y="727"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
@@ -439,6 +502,7 @@
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="tv.fill" catalog="system" width="128" height="95"/>
         <systemColor name="labelColor">
