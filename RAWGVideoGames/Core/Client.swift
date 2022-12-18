@@ -86,6 +86,15 @@ final class Client {
         }
     }
     
+    class func getSelectedGame(id: Int, completion: @escaping (GameDetailModel?, Error?) -> Void) {
+        taskForGETRequest(url: Endpoints.selectedGame(id).url, responseType: GameDetailModel.self) { response, error in
+            if let response = response {
+                completion(response, nil)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
     
     class func getGamesOrderingReleased(completion: @escaping ([GameModel]?, Error?) -> Void) {
         taskForGETRequest(url: Endpoints.orderingGamesRelaesed.url, responseType: GetGamesResponseModel.self) { response, error in
@@ -107,4 +116,3 @@ final class Client {
         }
     }
 }
-
