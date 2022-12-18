@@ -30,9 +30,9 @@ class BaseViewController: UIViewController {
     }
     
     func showErrorAlert(message: String) {
-        SwiftAlertView.show(title: "Error",
+        SwiftAlertView.show(title: "Error".localized(),
                             message: message,
-                            buttonTitles: ["OK"])
+                            buttonTitles: ["OK".localized()])
     }
 }
 

@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  RAWGVideoGames
+
+  Created by Yeliz Akkaya on 18.12.2022.
+  
+*/
+"Released Date: " = "Çıkış Tarihi: ";
+"Updated Date: " = "Güncelleme Tarihi ";
+"Rating: " = "Değerlendirme: ";
+"Description: " = "Açıklama: ";
+"Add" = "Ekle";
+"Update" = "Güncelle";
+"No changes note." = "Notta değişiklik bulunmadı.";
+"Not all values ​​are filled." = "Tüm alanlar doldurulmalıdır.";
+"Error" = "Hata";
+"OK" = "Tamam";

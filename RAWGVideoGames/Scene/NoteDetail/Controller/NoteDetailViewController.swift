@@ -28,7 +28,7 @@ class NoteDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addNoteViewModel.delegate = self
-        addOrUpdateButtonOutlet.setTitle("Add", for: .normal)
+        addOrUpdateButtonOutlet.setTitle("Add".localized(), for: .normal)
         
         dateLabel.text = addNoteViewModel.currentTime()
         

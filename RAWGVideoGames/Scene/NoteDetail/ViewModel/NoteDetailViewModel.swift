@@ -30,7 +30,7 @@ final class NoteDetailViewModel: NoteDetailViewModelProtocol {
         if noteText != "" {
             var selectedTrue = selectedNoteTrueOrFalse
             selectedTrue = true
-            button.setTitle("Update", for: .normal)
+            button.setTitle("Update".localized(), for: .normal)
             gameLabelHidden.isUserInteractionEnabled = false
             dateText.text = selectedNote?.noteDate
             return selectedTrue
@@ -42,13 +42,13 @@ final class NoteDetailViewModel: NoteDetailViewModelProtocol {
     func addOrUpdate(selectedNote: Bool, selectedNoteText: String, currentNoteText: String, gameName: String) -> String {
         if selectedNote == true {
             if selectedNoteText == currentNoteText {
-                return "No changes note."
+                return "No changes note.".localized()
             } else {
                 delegate?.updatePressed(previousText: selectedNoteText, currentText: currentNoteText)
             }
         } else {
             if (currentNoteText == "" || gameName == "") {
-                return "Not all values ​​are filled."
+                return "Not all values ​​are filled.".localized()
             } else {
                 delegate?.savePressed(currentText: currentNoteText, gameName: gameName, noteDate: currentTime())
             }

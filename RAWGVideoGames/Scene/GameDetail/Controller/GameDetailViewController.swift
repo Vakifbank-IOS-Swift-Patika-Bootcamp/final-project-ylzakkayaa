@@ -40,13 +40,13 @@ class GameDetailViewController: UIViewController {
 
 extension GameDetailViewController: GameDetailViewModelDelegate {
     func gameLoaded() {
-        gameReleasedDateLabel.text = "Released Date: "+viewModel.getGameReleased()
+        gameReleasedDateLabel.text = "Released Date: ".localized() + viewModel.getGameReleased()
         gameNameLabel.text = viewModel.getGameName()
         guard let url = viewModel.getGameImageURL() else { return }
         gameImage.sd_setImage(with: url)
-        gameUpdateDateLabel.text = "Updated Date: " + viewModel.getGameUpdate()
-        gameRatingLabel.text = "Rating: " + String(viewModel.getGameRating())
-        gameDescriptionLabel.text = "Description: " + viewModel.getGameDescription()
+        gameUpdateDateLabel.text = "Updated Date: ".localized() + viewModel.getGameUpdate()
+        gameRatingLabel.text = "Rating: ".localized() + String(viewModel.getGameRating())
+        gameDescriptionLabel.text = "Description: ".localized() + viewModel.getGameDescription()
         playTime.text = String(viewModel.playTime())
         screenShotsCount.text = String(viewModel.screenShotsCount())
         moviesCount.text = String(viewModel.moviesCount())

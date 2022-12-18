@@ -25,7 +25,7 @@ class GameTableViewCell: UITableViewCell {
             gameImage.sd_setImage(with: URL(string: game.image!))
         }
         ratingLabel.text = String(game.rating!)
-        releasedDateLabel.text = "Released Date: " + (game.released ?? "")
+        releasedDateLabel.text = "Released Date: ".localized() + (game.released ?? "")
     }
     
     override func prepareForReuse() {

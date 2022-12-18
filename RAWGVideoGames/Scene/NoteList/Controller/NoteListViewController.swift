@@ -27,7 +27,7 @@ class NoteListViewController: UIViewController {
         noteViewModel.fetchNotes()
         
         //Yeni note eklmeek için float button tanımlarını yaptım.
-        addNoteButtonOutlet.setTitle("Add", for: .normal)
+        addNoteButtonOutlet.setTitle("Add".localized(), for: .normal)
         addNoteButtonOutlet.layer.cornerRadius = 30
         addNoteButtonOutlet.translatesAutoresizingMaskIntoConstraints = false
         addNoteButtonOutlet.widthAnchor.constraint(equalToConstant: 60).isActive = true

@@ -1,0 +1,81 @@
+
+/* Class = "UINavigationItem"; title = "NOTES"; ObjectID = "701-0Y-McS"; */
+"701-0Y-McS.title" = "NOTLAR";
+
+/* Class = "UISearchBar"; placeholder = "Game Name at Search"; ObjectID = "7pj-Jb-xr1"; */
+"7pj-Jb-xr1.placeholder" = "Oyun İsmi ile Arama Yap";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "FMl-fJ-dhK"; */
+"FMl-fJ-dhK.text" = "Değerlendirme";
+
+/* Class = "UITextField"; placeholder = "Add Game Name"; ObjectID = "GoE-bh-oL4"; */
+"GoE-bh-oL4.placeholder" = "Oyun İsmi Ekle";
+
+/* Class = "UINavigationItem"; title = "FAVORITE GAMES"; ObjectID = "JfM-tB-8hg"; */
+"JfM-tB-8hg.title" = "FAVORİ OYUNLAR";
+
+/* Class = "UITabBarItem"; title = "GAMES"; ObjectID = "NCW-U4-5X3"; */
+"NCW-U4-5X3.title" = "OYUNLAR";
+
+/* Class = "UIButton"; configuration.title = "addOrUpdateButton"; ObjectID = "Nd4-8P-iSQ"; */
+"Nd4-8P-iSQ.configuration.title" = "eklemeVeyaUpdateEtmeButonu";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Nd4-8P-iSQ"; */
+"Nd4-8P-iSQ.normalTitle" = "Buton";
+
+/* Class = "UILabel"; text = "Update Date"; ObjectID = "On3-3k-pjt"; */
+"On3-3k-pjt.text" = "Güncelleme Tarihi";
+
+/* Class = "UILabel"; text = "Date: "; ObjectID = "Owl-yV-bIy"; */
+"Owl-yV-bIy.text" = "Tarih: ";
+
+/* Class = "UIButton"; configuration.title = "Rating"; ObjectID = "SjT-Rg-KXX"; */
+"SjT-Rg-KXX.configuration.title" = "Değerlendirme";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SjT-Rg-KXX"; */
+"SjT-Rg-KXX.normalTitle" = "Buton";
+
+/* Class = "UIButton"; configuration.title = "Released"; ObjectID = "bhL-Gh-z8j"; */
+"bhL-Gh-z8j.configuration.title" = "Yayınlanma Tarihi";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bhL-Gh-z8j"; */
+"bhL-Gh-z8j.normalTitle" = "Buton";
+
+/* Class = "UIButton"; configuration.title = "Name"; ObjectID = "cLn-5S-bZN"; */
+"cLn-5S-bZN.configuration.title" = "İsim";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cLn-5S-bZN"; */
+"cLn-5S-bZN.normalTitle" = "Buton";
+
+/* Class = "UIBarButtonItem"; title = "addOrUpdate"; ObjectID = "gtx-cI-dPz"; */
+"gtx-cI-dPz.title" = "EklemeVeyaGüncelleme";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "h9l-Ko-aQx"; */
+"h9l-Ko-aQx.normalTitle" = "Buton";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "qO4-WJ-ouT"; */
+"qO4-WJ-ouT.text" = "Açıklama";
+
+/* Class = "UIButton"; configuration.title = "add"; ObjectID = "sLF-UC-aRS"; */
+"sLF-UC-aRS.configuration.title" = "ekle";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sLF-UC-aRS"; */
+"sLF-UC-aRS.normalTitle" = "Buton";
+
+/* Class = "UILabel"; text = "Released Date"; ObjectID = "tZC-fV-ZD4"; */
+"tZC-fV-ZD4.text" = "Yayınlanma Tarihi";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "vFI-xj-Sfc"; */
+"vFI-xj-Sfc.title" = "Madde";
+
+/* Class = "UITabBarItem"; title = "NOTES"; ObjectID = "wAi-HD-lsR"; */
+"wAi-HD-lsR.title" = "NOTLAR";
+
+/* Class = "UINavigationItem"; title = "GAME LIST"; ObjectID = "y67-jP-x6w"; */
+"y67-jP-x6w.title" = "OYUN LİSTESİ";
+
+/* Class = "UITabBarItem"; title = "FAVORITE"; ObjectID = "yej-yt-oDZ"; */
+"yej-yt-oDZ.title" = "FAVORİ";
+
+/* Class = "UIViewController"; title = "GAMES"; ObjectID = "zEI-es-WVB"; */
+"zEI-es-WVB.title" = "OYUNLAR";
