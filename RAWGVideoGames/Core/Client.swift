@@ -27,7 +27,7 @@ final class Client {
             case .allGames:
                 return Endpoints.gamesBaseUrl
             case .orderingGamesNames:
-                return Endpoints.gamesBaseUrl
+                return Endpoints.gamesBaseUrl + "&ordering=name"
             case .orderingGamesRelaesed:
                 return Endpoints.gamesBaseUrl + "&ordering=released"
             case .orderingGamesRating:
