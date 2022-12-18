@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GamesListViewController: BaseViewController {
+final class GamesListViewController: BaseViewController {
     
     @IBOutlet weak var trailing: NSLayoutConstraint!
     @IBOutlet weak var leading: NSLayoutConstraint!
@@ -104,8 +104,8 @@ extension GamesListViewController {
             leading.constant = 0
             menuOut = false
         } else {
-            trailing.constant = -100
-            leading.constant = 100
+            trailing.constant = -150
+            leading.constant = 150
             menuOut = true
         }
     }

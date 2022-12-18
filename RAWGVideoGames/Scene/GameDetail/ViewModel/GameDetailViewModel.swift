@@ -30,8 +30,12 @@ protocol GameDetailViewModelDelegate: AnyObject {
 final class GameDetailViewModel: GameDetailViewModelProtocol {
     weak var delegate: GameDetailViewModelDelegate?
     private var game: GameDetailModel?
-    var games: [Games] = []
-    var coreDataId: Games?
+    private var games: [Games] = []
+    private var coreDataId: Games?
+    
+    init( game: GameDetailModel? = nil) {
+        self.game = game
+    }
     
     func fetchGameDetail(id: Int) {
         Client.getSelectedGame(id: id) { [weak self] gameDetail, error in
@@ -46,15 +50,15 @@ final class GameDetailViewModel: GameDetailViewModelProtocol {
     }
     
     func getGameName() -> String {
-        return game?.name ?? "Unknow"
+        return game?.name ?? "Unknow".localized()
     }
     
     func getGameReleased() -> String {
-        return game?.release ?? "Unknow"
+        return game?.release ?? "Unknow".localized()
     }
     
     func getGameUpdate() -> String {
-        return game?.update ?? "Unknow"
+        return game?.update ?? "Unknow".localized()
     }
     
     func getGameRating() -> Double {
@@ -62,7 +66,7 @@ final class GameDetailViewModel: GameDetailViewModelProtocol {
     }
     
     func getGameDescription() -> String {
-        return game?.descriptionRaw ?? "Unknow"
+        return game?.descriptionRaw ?? "Unknow".localized()
     }
     
     func playTime() -> Int {

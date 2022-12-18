@@ -8,14 +8,14 @@
 import UIKit
 import SDWebImage
 
-class GameTableViewCell: UITableViewCell {
+final class GameTableViewCell: UITableViewCell {
 
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var gameImage: UIImageView!
     @IBOutlet weak var releasedDateLabel: UILabel!
     @IBOutlet weak var ratingImage: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
-    var gamePlatforms : String = ""
+    private var gamePlatforms : String = ""
     
     func configureCell(game: GameModel) {
         gameLabel.text = game.name
@@ -25,7 +25,7 @@ class GameTableViewCell: UITableViewCell {
             gameImage.sd_setImage(with: URL(string: game.image!))
         }
         ratingLabel.text = String(game.rating!)
-        releasedDateLabel.text = "Released Date: " + (game.released ?? "")
+        releasedDateLabel.text = "Released Date: ".localized() + (game.released ?? "")
     }
     
     override func prepareForReuse() {

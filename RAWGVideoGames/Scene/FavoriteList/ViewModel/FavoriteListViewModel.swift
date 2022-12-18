@@ -22,7 +22,7 @@ protocol FavoriteListViewModelDelegate: AnyObject {
 final class FavoriteListViewModel: FavoriteListViewModelProtocol {
     
     var delegate: FavoriteListViewModelDelegate?
-    var favoriteGames: [Games]?
+    private var favoriteGames: [Games]?
     
     func fetchFavoriteGames() {
         favoriteGames = CoreDataManager.shared.getFavorites()
